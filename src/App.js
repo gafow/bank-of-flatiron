@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
 
     const fetchData = () => {
-      fetch("http://localhost:3001/transactions").
+      fetch("https://bank-of-flatiron-saver.vercel.app/transactions").
         then(response => response.json())
         .then(data => {
           setData2(data)
@@ -27,7 +27,7 @@ function App() {
 
 
   function addTransaction(transObj) {
-    fetch("http://localhost:3001/transactions", {
+    fetch("https://bank-of-flatiron-saver.vercel.app/transactions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
